@@ -54,7 +54,7 @@ form.addEventListener("submit", function(event){
     greeting.classList.add("success-message");
     greeting.style.display = "block";
 
-    // Display a message upon reaching the maximum occupancy
+    // Display a message and highlight teams upon reaching the maximum occupancy
     if (count === MAXIMUM_OCCUPANCY) {
         // Find the team(s) with the most attendees
         const teamCards = document.querySelectorAll(".team-card");
@@ -76,6 +76,7 @@ form.addEventListener("submit", function(event){
             }
         }
 
+        // Output the celebration message
         celebrationMessage.textContent = "🥳 Congratualations! The Intel Sustainability Summit has reached it's maximum occupancy! 🥳";
         celebrationMessage.classList.add("success-message");
         celebrationMessage.style.display = "block";
